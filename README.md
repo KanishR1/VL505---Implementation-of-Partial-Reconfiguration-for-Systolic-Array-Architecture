@@ -1,1 +1,1 @@
-# VL505---Implementation-of-Partial-Reconfiguration-for-Systolic-Array-Architecture
+# VL505 - Course Project - Implementation of Partial Reconfiguration for Systolic Array Architecture
