@@ -1,0 +1,427 @@
+
+*** Running vivado
+    with args -log custom_mem_myip_custom_mem_0_1.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source custom_mem_myip_custom_mem_0_1.tcl
+
+
+****** Vivado v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source custom_mem_myip_custom_mem_0_1.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/jay/Kanish/ip_repo/myip_custom_mem_1.0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2019.1/data/ip'.
+Command: synth_design -top custom_mem_myip_custom_mem_0_1 -part xc7z020clg484-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 32744 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1797.203 ; gain = 153.684 ; free physical = 11334 ; free virtual = 18609
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'custom_mem_myip_custom_mem_0_1' [/home/jay/Kanish/custom_memory/custom_memory.srcs/sources_1/bd/custom_mem/ip/custom_mem_myip_custom_mem_0_1/synth/custom_mem_myip_custom_mem_0_1.v:56]
+INFO: [Synth 8-6157] synthesizing module 'myip_custom_mem_v1_0' [/home/jay/Kanish/custom_memory/custom_memory.srcs/sources_1/bd/custom_mem/ipshared/4896/hdl/myip_custom_mem_v1_0.v:4]
+	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S00_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'myip_custom_mem_v1_0_S00_AXI' [/home/jay/Kanish/custom_memory/custom_memory.srcs/sources_1/bd/custom_mem/ipshared/4896/hdl/myip_custom_mem_v1_0_S00_AXI.v:4]
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+	Parameter ADDR_LSB bound to: 2 - type: integer 
+	Parameter OPT_MEM_ADDR_BITS bound to: 1 - type: integer 
+INFO: [Synth 8-226] default block is never used [/home/jay/Kanish/custom_memory/custom_memory.srcs/sources_1/bd/custom_mem/ipshared/4896/hdl/myip_custom_mem_v1_0_S00_AXI.v:236]
+INFO: [Synth 8-226] default block is never used [/home/jay/Kanish/custom_memory/custom_memory.srcs/sources_1/bd/custom_mem/ipshared/4896/hdl/myip_custom_mem_v1_0_S00_AXI.v:377]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg3_reg was removed.  [/home/jay/Kanish/custom_memory/custom_memory.srcs/sources_1/bd/custom_mem/ipshared/4896/hdl/myip_custom_mem_v1_0_S00_AXI.v:231]
+INFO: [Synth 8-6155] done synthesizing module 'myip_custom_mem_v1_0_S00_AXI' (1#1) [/home/jay/Kanish/custom_memory/custom_memory.srcs/sources_1/bd/custom_mem/ipshared/4896/hdl/myip_custom_mem_v1_0_S00_AXI.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'myip_custom_mem_v1_0' (2#1) [/home/jay/Kanish/custom_memory/custom_memory.srcs/sources_1/bd/custom_mem/ipshared/4896/hdl/myip_custom_mem_v1_0.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'custom_mem_myip_custom_mem_0_1' (3#1) [/home/jay/Kanish/custom_memory/custom_memory.srcs/sources_1/bd/custom_mem/ip/custom_mem_myip_custom_mem_0_1/synth/custom_mem_myip_custom_mem_0_1.v:56]
+WARNING: [Synth 8-3331] design myip_custom_mem_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[2]
+WARNING: [Synth 8-3331] design myip_custom_mem_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[1]
+WARNING: [Synth 8-3331] design myip_custom_mem_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[0]
+WARNING: [Synth 8-3331] design myip_custom_mem_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[2]
+WARNING: [Synth 8-3331] design myip_custom_mem_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[1]
+WARNING: [Synth 8-3331] design myip_custom_mem_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1921.922 ; gain = 278.402 ; free physical = 11289 ; free virtual = 18563
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1921.922 ; gain = 278.402 ; free physical = 11246 ; free virtual = 18521
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1921.922 ; gain = 278.402 ; free physical = 11246 ; free virtual = 18521
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2032.758 ; gain = 0.000 ; free physical = 11194 ; free virtual = 18480
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.12 . Memory (MB): peak = 2032.758 ; gain = 0.000 ; free physical = 11191 ; free virtual = 18477
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 2032.758 ; gain = 389.238 ; free physical = 11151 ; free virtual = 18459
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 2032.758 ; gain = 389.238 ; free physical = 11151 ; free virtual = 18459
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:12 . Memory (MB): peak = 2032.758 ; gain = 389.238 ; free physical = 11151 ; free virtual = 18459
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 2032.758 ; gain = 389.238 ; free physical = 11127 ; free virtual = 18433
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 4     
+	                4 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 6     
++---RAMs : 
+	            2047K Bit         RAMs := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 3     
+	   4 Input     32 Bit        Muxes := 4     
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 7     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module myip_custom_mem_v1_0_S00_AXI 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 4     
+	                4 Bit    Registers := 2     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 6     
++---RAMs : 
+	            2047K Bit         RAMs := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 3     
+	   4 Input     32 Bit        Muxes := 4     
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 7     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3331] design custom_mem_myip_custom_mem_0_1 has unconnected port s00_axi_awprot[2]
+WARNING: [Synth 8-3331] design custom_mem_myip_custom_mem_0_1 has unconnected port s00_axi_awprot[1]
+WARNING: [Synth 8-3331] design custom_mem_myip_custom_mem_0_1 has unconnected port s00_axi_awprot[0]
+WARNING: [Synth 8-3331] design custom_mem_myip_custom_mem_0_1 has unconnected port s00_axi_arprot[2]
+WARNING: [Synth 8-3331] design custom_mem_myip_custom_mem_0_1 has unconnected port s00_axi_arprot[1]
+WARNING: [Synth 8-3331] design custom_mem_myip_custom_mem_0_1 has unconnected port s00_axi_arprot[0]
+INFO: [Synth 8-3886] merging instance 'inst/myip_custom_mem_v1_0_S00_AXI_inst/axi_rresp_reg[0]' (FDRE) to 'inst/myip_custom_mem_v1_0_S00_AXI_inst/axi_rresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/myip_custom_mem_v1_0_S00_AXI_inst/axi_rresp_reg[1] )
+INFO: [Synth 8-3886] merging instance 'inst/myip_custom_mem_v1_0_S00_AXI_inst/axi_bresp_reg[0]' (FDRE) to 'inst/myip_custom_mem_v1_0_S00_AXI_inst/axi_bresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/myip_custom_mem_v1_0_S00_AXI_inst/axi_bresp_reg[1] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 2032.758 ; gain = 389.238 ; free physical = 11104 ; free virtual = 18401
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping  Report (see note below)
++------------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name                   | RTL Object | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|myip_custom_mem_v1_0_S00_AXI: | memory_reg | 64 K x 32(NO_CHANGE)   | W | R |                        |   |   | Port A           | 0      | 64     | 
++------------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6837] The timing for the instance myip_custom_mem_v1_0_S00_AXI_insti_0/inst/myip_custom_mem_v1_0_S00_AXI_inst/memory_reg_1_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance myip_custom_mem_v1_0_S00_AXI_insti_0/inst/myip_custom_mem_v1_0_S00_AXI_inst/memory_reg_1_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance myip_custom_mem_v1_0_S00_AXI_insti_0/inst/myip_custom_mem_v1_0_S00_AXI_inst/memory_reg_1_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance myip_custom_mem_v1_0_S00_AXI_insti_0/inst/myip_custom_mem_v1_0_S00_AXI_inst/memory_reg_1_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance myip_custom_mem_v1_0_S00_AXI_insti_0/inst/myip_custom_mem_v1_0_S00_AXI_inst/memory_reg_1_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance myip_custom_mem_v1_0_S00_AXI_insti_0/inst/myip_custom_mem_v1_0_S00_AXI_inst/memory_reg_1_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance myip_custom_mem_v1_0_S00_AXI_insti_0/inst/myip_custom_mem_v1_0_S00_AXI_inst/memory_reg_1_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance myip_custom_mem_v1_0_S00_AXI_insti_0/inst/myip_custom_mem_v1_0_S00_AXI_inst/memory_reg_1_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance myip_custom_mem_v1_0_S00_AXI_insti_0/inst/myip_custom_mem_v1_0_S00_AXI_inst/memory_reg_1_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance myip_custom_mem_v1_0_S00_AXI_insti_0/inst/myip_custom_mem_v1_0_S00_AXI_inst/memory_reg_1_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance myip_custom_mem_v1_0_S00_AXI_insti_0/inst/myip_custom_mem_v1_0_S00_AXI_inst/memory_reg_1_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance myip_custom_mem_v1_0_S00_AXI_insti_0/inst/myip_custom_mem_v1_0_S00_AXI_inst/memory_reg_1_11 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance myip_custom_mem_v1_0_S00_AXI_insti_0/inst/myip_custom_mem_v1_0_S00_AXI_inst/memory_reg_1_12 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance myip_custom_mem_v1_0_S00_AXI_insti_0/inst/myip_custom_mem_v1_0_S00_AXI_inst/memory_reg_1_13 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance myip_custom_mem_v1_0_S00_AXI_insti_0/inst/myip_custom_mem_v1_0_S00_AXI_inst/memory_reg_1_14 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance myip_custom_mem_v1_0_S00_AXI_insti_0/inst/myip_custom_mem_v1_0_S00_AXI_inst/memory_reg_1_15 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance myip_custom_mem_v1_0_S00_AXI_insti_0/inst/myip_custom_mem_v1_0_S00_AXI_inst/memory_reg_1_16 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance myip_custom_mem_v1_0_S00_AXI_insti_0/inst/myip_custom_mem_v1_0_S00_AXI_inst/memory_reg_1_17 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance myip_custom_mem_v1_0_S00_AXI_insti_0/inst/myip_custom_mem_v1_0_S00_AXI_inst/memory_reg_1_18 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance myip_custom_mem_v1_0_S00_AXI_insti_0/inst/myip_custom_mem_v1_0_S00_AXI_inst/memory_reg_1_19 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance myip_custom_mem_v1_0_S00_AXI_insti_0/inst/myip_custom_mem_v1_0_S00_AXI_inst/memory_reg_1_20 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance myip_custom_mem_v1_0_S00_AXI_insti_0/inst/myip_custom_mem_v1_0_S00_AXI_inst/memory_reg_1_21 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance myip_custom_mem_v1_0_S00_AXI_insti_0/inst/myip_custom_mem_v1_0_S00_AXI_inst/memory_reg_1_22 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance myip_custom_mem_v1_0_S00_AXI_insti_0/inst/myip_custom_mem_v1_0_S00_AXI_inst/memory_reg_1_23 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance myip_custom_mem_v1_0_S00_AXI_insti_0/inst/myip_custom_mem_v1_0_S00_AXI_inst/memory_reg_1_24 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance myip_custom_mem_v1_0_S00_AXI_insti_0/inst/myip_custom_mem_v1_0_S00_AXI_inst/memory_reg_1_25 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance myip_custom_mem_v1_0_S00_AXI_insti_0/inst/myip_custom_mem_v1_0_S00_AXI_inst/memory_reg_1_26 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance myip_custom_mem_v1_0_S00_AXI_insti_0/inst/myip_custom_mem_v1_0_S00_AXI_inst/memory_reg_1_27 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance myip_custom_mem_v1_0_S00_AXI_insti_0/inst/myip_custom_mem_v1_0_S00_AXI_inst/memory_reg_1_28 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance myip_custom_mem_v1_0_S00_AXI_insti_0/inst/myip_custom_mem_v1_0_S00_AXI_inst/memory_reg_1_29 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance myip_custom_mem_v1_0_S00_AXI_insti_0/inst/myip_custom_mem_v1_0_S00_AXI_inst/memory_reg_1_30 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance myip_custom_mem_v1_0_S00_AXI_insti_0/inst/myip_custom_mem_v1_0_S00_AXI_inst/memory_reg_1_31 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 2032.758 ; gain = 389.238 ; free physical = 10918 ; free virtual = 18210
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 2032.758 ; gain = 389.238 ; free physical = 10915 ; free virtual = 18206
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping  Report
++------------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name                   | RTL Object | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|myip_custom_mem_v1_0_S00_AXI: | memory_reg | 64 K x 32(NO_CHANGE)   | W | R |                        |   |   | Port A           | 0      | 64     | 
++------------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6837] The timing for the instance inst/myip_custom_mem_v1_0_S00_AXI_inst/memory_reg_1_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/myip_custom_mem_v1_0_S00_AXI_inst/memory_reg_1_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/myip_custom_mem_v1_0_S00_AXI_inst/memory_reg_1_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/myip_custom_mem_v1_0_S00_AXI_inst/memory_reg_1_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/myip_custom_mem_v1_0_S00_AXI_inst/memory_reg_1_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/myip_custom_mem_v1_0_S00_AXI_inst/memory_reg_1_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/myip_custom_mem_v1_0_S00_AXI_inst/memory_reg_1_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/myip_custom_mem_v1_0_S00_AXI_inst/memory_reg_1_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/myip_custom_mem_v1_0_S00_AXI_inst/memory_reg_1_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/myip_custom_mem_v1_0_S00_AXI_inst/memory_reg_1_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/myip_custom_mem_v1_0_S00_AXI_inst/memory_reg_1_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/myip_custom_mem_v1_0_S00_AXI_inst/memory_reg_1_11 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/myip_custom_mem_v1_0_S00_AXI_inst/memory_reg_1_12 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/myip_custom_mem_v1_0_S00_AXI_inst/memory_reg_1_13 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/myip_custom_mem_v1_0_S00_AXI_inst/memory_reg_1_14 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/myip_custom_mem_v1_0_S00_AXI_inst/memory_reg_1_15 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/myip_custom_mem_v1_0_S00_AXI_inst/memory_reg_1_16 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/myip_custom_mem_v1_0_S00_AXI_inst/memory_reg_1_17 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/myip_custom_mem_v1_0_S00_AXI_inst/memory_reg_1_18 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/myip_custom_mem_v1_0_S00_AXI_inst/memory_reg_1_19 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/myip_custom_mem_v1_0_S00_AXI_inst/memory_reg_1_20 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/myip_custom_mem_v1_0_S00_AXI_inst/memory_reg_1_21 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/myip_custom_mem_v1_0_S00_AXI_inst/memory_reg_1_22 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/myip_custom_mem_v1_0_S00_AXI_inst/memory_reg_1_23 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/myip_custom_mem_v1_0_S00_AXI_inst/memory_reg_1_24 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/myip_custom_mem_v1_0_S00_AXI_inst/memory_reg_1_25 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/myip_custom_mem_v1_0_S00_AXI_inst/memory_reg_1_26 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/myip_custom_mem_v1_0_S00_AXI_inst/memory_reg_1_27 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/myip_custom_mem_v1_0_S00_AXI_inst/memory_reg_1_28 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/myip_custom_mem_v1_0_S00_AXI_inst/memory_reg_1_29 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/myip_custom_mem_v1_0_S00_AXI_inst/memory_reg_1_30 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/myip_custom_mem_v1_0_S00_AXI_inst/memory_reg_1_31 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 2032.758 ; gain = 389.238 ; free physical = 10913 ; free virtual = 18205
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6064] Net n_0_106 is driving 64 big block pins (URAM, BRAM and DSP loads). Created 7 replicas of its driver. 
+INFO: [Synth 8-6064] Net n_0_105 is driving 64 big block pins (URAM, BRAM and DSP loads). Created 7 replicas of its driver. 
+INFO: [Synth 8-6064] Net n_0_104 is driving 64 big block pins (URAM, BRAM and DSP loads). Created 7 replicas of its driver. 
+INFO: [Synth 8-6064] Net \inst/myip_custom_mem_v1_0_S00_AXI_inst/wr_en_in  is driving 64 big block pins (URAM, BRAM and DSP loads). Created 7 replicas of its driver. 
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 2032.758 ; gain = 389.238 ; free physical = 12333 ; free virtual = 19614
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 2032.758 ; gain = 389.238 ; free physical = 12333 ; free virtual = 19614
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 2032.758 ; gain = 389.238 ; free physical = 12332 ; free virtual = 19613
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 2032.758 ; gain = 389.238 ; free physical = 12332 ; free virtual = 19613
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 2032.758 ; gain = 389.238 ; free physical = 12331 ; free virtual = 19612
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 2032.758 ; gain = 389.238 ; free physical = 12331 ; free virtual = 19612
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----------+------+
+|      |Cell       |Count |
++------+-----------+------+
+|1     |LUT1       |     1|
+|2     |LUT2       |     1|
+|3     |LUT3       |    80|
+|4     |LUT4       |    18|
+|5     |LUT6       |    36|
+|6     |RAMB36E1   |    32|
+|7     |RAMB36E1_1 |    32|
+|8     |FDRE       |   137|
+|9     |FDSE       |     1|
++------+-----------+------+
+
+Report Instance Areas: 
++------+--------------------------------------+-----------------------------+------+
+|      |Instance                              |Module                       |Cells |
++------+--------------------------------------+-----------------------------+------+
+|1     |top                                   |                             |   338|
+|2     |  inst                                |myip_custom_mem_v1_0         |   338|
+|3     |    myip_custom_mem_v1_0_S00_AXI_inst |myip_custom_mem_v1_0_S00_AXI |   338|
++------+--------------------------------------+-----------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 2032.758 ; gain = 389.238 ; free physical = 12331 ; free virtual = 19612
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 6 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 2032.758 ; gain = 278.402 ; free physical = 12387 ; free virtual = 19667
+Synthesis Optimization Complete : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 2032.758 ; gain = 389.238 ; free physical = 12387 ; free virtual = 19667
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 64 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2032.758 ; gain = 0.000 ; free physical = 12310 ; free virtual = 19590
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+94 Infos, 14 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 2032.758 ; gain = 588.836 ; free physical = 12411 ; free virtual = 19691
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2032.758 ; gain = 0.000 ; free physical = 12411 ; free virtual = 19691
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint '/home/jay/Kanish/custom_memory/custom_memory.runs/custom_mem_myip_custom_mem_0_1_synth_1/custom_mem_myip_custom_mem_0_1.dcp' has been generated.
+WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP custom_mem_myip_custom_mem_0_1, cache-ID = becf305871330691
+INFO: [Coretcl 2-1174] Renamed 2 cell refs.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2056.770 ; gain = 0.000 ; free physical = 12398 ; free virtual = 19681
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint '/home/jay/Kanish/custom_memory/custom_memory.runs/custom_mem_myip_custom_mem_0_1_synth_1/custom_mem_myip_custom_mem_0_1.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file custom_mem_myip_custom_mem_0_1_utilization_synth.rpt -pb custom_mem_myip_custom_mem_0_1_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Nov 28 08:57:58 2023...

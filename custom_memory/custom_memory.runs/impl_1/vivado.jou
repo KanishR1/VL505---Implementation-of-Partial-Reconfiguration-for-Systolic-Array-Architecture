@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Tue Nov 28 09:02:29 2023
+# Process ID: 4278
+# Current directory: /home/jay/Kanish/custom_memory/custom_memory.runs/impl_1
+# Command line: vivado -log custom_mem_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source custom_mem_wrapper.tcl -notrace
+# Log file: /home/jay/Kanish/custom_memory/custom_memory.runs/impl_1/custom_mem_wrapper.vdi
+# Journal file: /home/jay/Kanish/custom_memory/custom_memory.runs/impl_1/vivado.jou
+#-----------------------------------------------------------
+source custom_mem_wrapper.tcl -notrace

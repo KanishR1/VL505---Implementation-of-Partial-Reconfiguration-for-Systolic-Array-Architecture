@@ -1,0 +1,45 @@
+18:09:17 **** Incremental Build of configuration Debug for project send_data ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+18:09:24 **** Incremental Build of configuration Debug for project send_data ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+18:12:14 **** Incremental Build of configuration Debug for project send_data ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+18:25:55 **** Incremental Build of configuration Debug for project send_data ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+18:26:22 **** Incremental Build of configuration Debug for project send_data ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+18:27:19 **** Incremental Build of configuration Debug for project send_data ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+18:28:21 **** Incremental Build of configuration Debug for project send_data ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+18:29:00 **** Incremental Build of configuration Debug for project send_data ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+18:29:18 **** Incremental Build of configuration Debug for project send_data ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.

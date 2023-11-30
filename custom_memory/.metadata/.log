@@ -1,0 +1,40 @@
+!SESSION 2023-11-28 19:01:56.817 -----------------------------------------------
+eclipse.buildId=2019.1
+java.version=1.8.0_112
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_IN
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -data /home/jay/Kanish/custom_memory
+
+!ENTRY org.eclipse.ui 2 0 2023-11-28 19:01:57.870
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2023-11-28 19:01:57.870
+!MESSAGE Commands should really have a category: plug-in='com.xilinx.sdk.appwiz', id='com.xilinx.sdk.app.commands.ChangeAtfBuiltReferences', categoryId='com.xilinx.sdk.app.commands.category'
+
+!ENTRY org.eclipse.ui 2 0 2023-11-28 19:01:58.276
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2023-11-28 19:01:58.276
+!MESSAGE Commands should really have a category: plug-in='com.xilinx.sdk.appwiz', id='com.xilinx.sdk.app.commands.ChangeAtfBuiltReferences', categoryId='com.xilinx.sdk.app.commands.category'
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-11-28 19:02:05.299
+!MESSAGE XSCT Command: [::hsi::utils::init_repo], Thread: Worker-2
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-11-28 19:02:05.299
+!MESSAGE XSCT Command: [set sdk::sdk_chan tcfchan#0], Thread: Thread-14
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-11-28 19:02:08.213
+!MESSAGE XSCT command with result: [::hsi::utils::init_repo], Result: [null, ]. Thread: Worker-2
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-11-28 19:02:08.213
+!MESSAGE XSCT command with result: [set sdk::sdk_chan tcfchan#0], Result: [null, tcfchan#0]. Thread: Thread-14
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-11-28 19:02:08.215
+!MESSAGE XSCT Command: [setws /home/jay/Kanish/custom_memory], Thread: Thread-14
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-11-28 19:02:08.218
+!MESSAGE XSCT command with result: [setws /home/jay/Kanish/custom_memory], Result: [null, ]. Thread: Thread-14
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-11-28 19:02:08.342
+!MESSAGE XSCT Command: [::hsi::utils::openhw /home/jay/Kanish/custom_memory/custom_mem_wrapper_hw_platform_0/system.hdf], Thread: Worker-6
+
+!ENTRY org.eclipse.core.jobs 2 2 2023-11-28 19:02:13.226
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: com.xilinx.sdk.startup.InitSDK$12

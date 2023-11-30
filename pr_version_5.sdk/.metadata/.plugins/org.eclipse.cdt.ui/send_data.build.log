@@ -1,0 +1,8 @@
+18:29:18 **** Incremental Build of configuration Debug for project send_data ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+
+18:29:18 Build Finished (took 60ms)
+

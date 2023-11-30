@@ -1,0 +1,136 @@
+report_timing
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 6 CPUs
+INFO: [Timing 38-78] ReportTimingParams: -max_paths 1 -nworst 1 -delay_type max -sort_by slack.
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
+| Date         : Wed Nov 29 18:38:23 2023
+| Host         : nanditha running 64-bit Ubuntu 18.04.6 LTS
+| Command      : report_timing
+| Design       : design_1_wrapper
+| Device       : 7z020-clg484
+| Speed File   : -1  PRODUCTION 1.11 2014-09-11
+------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (VIOLATED) :        -13.808ns  (required time - arrival time)
+  Source:                 design_1_i/systolic_unit_0/inst/systolic_design/genblk4[2].genblk1[1].element/a_n_reg[4]/C
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            design_1_i/systolic_unit_0/inst/systolic_design/genblk4[2].genblk1[2].element/c_ab_reg[6]/D
+                            (rising edge-triggered cell FDRE clocked by clk_fpga_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_fpga_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk_fpga_0 rise@10.000ns - clk_fpga_0 rise@0.000ns)
+  Data Path Delay:        23.628ns  (logic 8.118ns (34.357%)  route 15.510ns (65.643%))
+  Logic Levels:           30  (CARRY4=7 LUT2=3 LUT3=3 LUT4=2 LUT5=6 LUT6=9)
+  Clock Path Skew:        -0.058ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    2.721ns = ( 12.721 - 10.000 ) 
+    Source Clock Delay      (SCD):    3.009ns
+    Clock Pessimism Removal (CPR):    0.230ns
+  Clock Uncertainty:      0.154ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.300ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Partition      Netlist Resource(s)
+  -------------------------------------------------------------------    ----------------------------------
+                         (clock clk_fpga_0 rise edge)
+                                                      0.000     0.000 r                 
+    PS7_X0Y0             PS7                          0.000     0.000 r  static         design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.193     1.193    static         design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.101     1.294 r  static         design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=3383, routed)        1.715     3.009    boundary       design_1_i/systolic_unit_0/inst/systolic_design/genblk4[2].genblk1[1].element/i_clk
+    SLICE_X68Y23         FDRE                                         r  reconfigurable design_1_i/systolic_unit_0/inst/systolic_design/genblk4[2].genblk1[1].element/a_n_reg[4]/C
+  -------------------------------------------------------------------    ----------------------------------
+    SLICE_X68Y23         FDRE (Prop_fdre_C_Q)         0.456     3.465 r  reconfigurable design_1_i/systolic_unit_0/inst/systolic_design/genblk4[2].genblk1[1].element/a_n_reg[4]/Q
+                         net (fo=20, routed)          0.817     4.282    reconfigurable design_1_i/systolic_unit_0/inst/systolic_design/genblk4[2].genblk1[1].element/mul/Q[4]
+    SLICE_X70Y23         LUT2 (Prop_lut2_I0_O)        0.150     4.432 r  reconfigurable design_1_i/systolic_unit_0/inst/systolic_design/genblk4[2].genblk1[1].element/mul/t_e1__30_carry__0_i_10__4/O
+                         net (fo=1, routed)           0.840     5.272    reconfigurable design_1_i/systolic_unit_0/inst/systolic_design/genblk4[1].genblk1[2].element/mul/t_e1__30_carry__0_0
+    SLICE_X67Y24         LUT6 (Prop_lut6_I3_O)        0.326     5.598 r  reconfigurable design_1_i/systolic_unit_0/inst/systolic_design/genblk4[1].genblk1[2].element/mul/t_e1__30_carry__0_i_7__4/O
+                         net (fo=1, routed)           0.000     5.598    reconfigurable design_1_i/systolic_unit_0/inst/systolic_design/genblk4[2].genblk1[2].element/mul/t_e1__61_carry__0_i_8__1_1[1]
+    SLICE_X67Y24         CARRY4 (Prop_carry4_S[1]_O[2])
+                                                      0.580     6.178 r  reconfigurable design_1_i/systolic_unit_0/inst/systolic_design/genblk4[2].genblk1[2].element/mul/t_e1__30_carry__0/O[2]
+                         net (fo=3, routed)           0.539     6.716    reconfigurable design_1_i/systolic_unit_0/inst/systolic_design/genblk4[2].genblk1[2].element/mul/t_e1__30_carry__0_n_5
+    SLICE_X68Y24         LUT3 (Prop_lut3_I2_O)        0.302     7.018 r  reconfigurable design_1_i/systolic_unit_0/inst/systolic_design/genblk4[2].genblk1[2].element/mul/t_e1__61_carry__0_i_9__1/O
+                         net (fo=2, routed)           0.585     7.603    reconfigurable design_1_i/systolic_unit_0/inst/systolic_design/genblk4[2].genblk1[2].element/mul/t_e1__61_carry__0_i_9__1_n_0
+    SLICE_X69Y24         LUT6 (Prop_lut6_I5_O)        0.124     7.727 r  reconfigurable design_1_i/systolic_unit_0/inst/systolic_design/genblk4[2].genblk1[2].element/mul/t_e1__61_carry__0_i_1__1/O
+                         net (fo=2, routed)           0.632     8.359    reconfigurable design_1_i/systolic_unit_0/inst/systolic_design/genblk4[2].genblk1[2].element/mul/t_e1__61_carry__0_i_1__1_n_0
+    SLICE_X66Y24         CARRY4 (Prop_carry4_DI[3]_CO[3])
+                                                      0.396     8.755 r  reconfigurable design_1_i/systolic_unit_0/inst/systolic_design/genblk4[2].genblk1[2].element/mul/t_e1__61_carry__0/CO[3]
+                         net (fo=1, routed)           0.009     8.764    reconfigurable design_1_i/systolic_unit_0/inst/systolic_design/genblk4[2].genblk1[2].element/mul/t_e1__61_carry__0_n_0
+    SLICE_X66Y25         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.219     8.983 f  reconfigurable design_1_i/systolic_unit_0/inst/systolic_design/genblk4[2].genblk1[2].element/mul/t_e1__61_carry__1/O[0]
+                         net (fo=4, routed)           0.440     9.423    reconfigurable design_1_i/systolic_unit_0/inst/systolic_design/genblk4[2].genblk1[2].element/mul/p_0_in[4]
+    SLICE_X67Y26         LUT5 (Prop_lut5_I0_O)        0.290     9.713 r  reconfigurable design_1_i/systolic_unit_0/inst/systolic_design/genblk4[2].genblk1[2].element/mul/shamt_l3_carry_i_24__1/O
+                         net (fo=8, routed)           0.767    10.480    reconfigurable design_1_i/systolic_unit_0/inst/systolic_design/genblk4[2].genblk1[2].element/mul/shamt_l3_carry_i_24__1_n_0
+    SLICE_X67Y26         LUT5 (Prop_lut5_I0_O)        0.332    10.812 r  reconfigurable design_1_i/systolic_unit_0/inst/systolic_design/genblk4[2].genblk1[2].element/mul/i__carry_i_32__9/O
+                         net (fo=10, routed)          0.679    11.490    reconfigurable design_1_i/systolic_unit_0/inst/systolic_design/genblk4[2].genblk1[2].element/mul/i__carry_i_32__9_n_0
+    SLICE_X64Y24         LUT6 (Prop_lut6_I4_O)        0.124    11.614 r  reconfigurable design_1_i/systolic_unit_0/inst/systolic_design/genblk4[2].genblk1[2].element/mul/i__carry_i_30__6/O
+                         net (fo=3, routed)           0.977    12.592    reconfigurable design_1_i/systolic_unit_0/inst/systolic_design/genblk4[2].genblk1[2].element/mul/i__carry_i_30__6_n_0
+    SLICE_X63Y26         LUT6 (Prop_lut6_I1_O)        0.124    12.716 r  reconfigurable design_1_i/systolic_unit_0/inst/systolic_design/genblk4[2].genblk1[2].element/mul/i__carry_i_16__5/O
+                         net (fo=11, routed)          0.738    13.453    reconfigurable design_1_i/systolic_unit_0/inst/systolic_design/genblk4[2].genblk1[2].element/mul/i__carry_i_16__5_n_0
+    SLICE_X63Y25         LUT6 (Prop_lut6_I2_O)        0.124    13.577 f  reconfigurable design_1_i/systolic_unit_0/inst/systolic_design/genblk4[2].genblk1[2].element/mul/i__carry_i_19__5/O
+                         net (fo=42, routed)          0.677    14.254    reconfigurable design_1_i/systolic_unit_0/inst/systolic_design/genblk4[2].genblk1[2].element/mul/i__carry_i_19__5_n_0
+    SLICE_X63Y26         LUT5 (Prop_lut5_I3_O)        0.124    14.378 r  reconfigurable design_1_i/systolic_unit_0/inst/systolic_design/genblk4[2].genblk1[2].element/mul/c_ab[8]_i_2__4/O
+                         net (fo=28, routed)          0.431    14.809    reconfigurable design_1_i/systolic_unit_0/inst/systolic_design/genblk4[1].genblk1[1].element/add/out_n2_carry_3
+    SLICE_X61Y26         LUT2 (Prop_lut2_I1_O)        0.124    14.933 r  reconfigurable design_1_i/systolic_unit_0/inst/systolic_design/genblk4[1].genblk1[1].element/add/out_n2_carry_i_3__1/O
+                         net (fo=1, routed)           0.000    14.933    reconfigurable design_1_i/systolic_unit_0/inst/systolic_design/genblk4[2].genblk1[2].element/add/c_ab[3]_i_42__1[1]
+    SLICE_X61Y26         CARRY4 (Prop_carry4_S[1]_O[2])
+                                                      0.580    15.513 r  reconfigurable design_1_i/systolic_unit_0/inst/systolic_design/genblk4[2].genblk1[2].element/add/out_n2_carry/O[2]
+                         net (fo=15, routed)          0.675    16.189    reconfigurable design_1_i/systolic_unit_0/inst/systolic_design/genblk4[2].genblk1[2].element/mul/c_ab[3]_i_43__1_0[2]
+    SLICE_X61Y28         LUT3 (Prop_lut3_I1_O)        0.302    16.491 r  reconfigurable design_1_i/systolic_unit_0/inst/systolic_design/genblk4[2].genblk1[2].element/mul/c_ab[3]_i_48__1/O
+                         net (fo=2, routed)           0.671    17.161    reconfigurable design_1_i/systolic_unit_0/inst/systolic_design/genblk4[2].genblk1[2].element/mul/c_ab[3]_i_48__1_n_0
+    SLICE_X60Y28         LUT4 (Prop_lut4_I3_O)        0.152    17.313 r  reconfigurable design_1_i/systolic_unit_0/inst/systolic_design/genblk4[2].genblk1[2].element/mul/i__carry_i_30__5/O
+                         net (fo=6, routed)           0.769    18.082    reconfigurable design_1_i/systolic_unit_0/inst/systolic_design/genblk4[2].genblk1[2].element/add/i__carry_i_16__7
+    SLICE_X61Y24         LUT5 (Prop_lut5_I4_O)        0.332    18.414 r  reconfigurable design_1_i/systolic_unit_0/inst/systolic_design/genblk4[2].genblk1[2].element/add/i__carry_i_26__9/O
+                         net (fo=1, routed)           0.000    18.414    reconfigurable design_1_i/systolic_unit_0/inst/systolic_design/genblk4[1].genblk1[1].element/c_ab[0]_i_10__1[0]
+    SLICE_X61Y24         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550    18.964 r  reconfigurable design_1_i/systolic_unit_0/inst/systolic_design/genblk4[1].genblk1[1].element/i__carry_i_16__7/CO[3]
+                         net (fo=1, routed)           0.009    18.973    reconfigurable design_1_i/systolic_unit_0/inst/systolic_design/genblk4[1].genblk1[1].element/i__carry_i_16__7_n_0
+    SLICE_X61Y25         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334    19.307 f  reconfigurable design_1_i/systolic_unit_0/inst/systolic_design/genblk4[1].genblk1[1].element/i__carry_i_15__7/O[1]
+                         net (fo=5, routed)           0.948    20.255    reconfigurable design_1_i/systolic_unit_0/inst/systolic_design/genblk4[2].genblk1[2].element/c_ab[14]_i_17__1[1]
+    SLICE_X61Y23         LUT4 (Prop_lut4_I1_O)        0.329    20.584 f  reconfigurable design_1_i/systolic_unit_0/inst/systolic_design/genblk4[2].genblk1[2].element/i__carry_i_9__3/O
+                         net (fo=10, routed)          0.358    20.942    reconfigurable design_1_i/systolic_unit_0/inst/systolic_design/genblk4[2].genblk1[2].element/c_ab_reg[6]_8
+    SLICE_X63Y24         LUT5 (Prop_lut5_I4_O)        0.326    21.268 r  reconfigurable design_1_i/systolic_unit_0/inst/systolic_design/genblk4[2].genblk1[2].element/i__carry_i_14__6/O
+                         net (fo=5, routed)           0.436    21.704    reconfigurable design_1_i/systolic_unit_0/inst/systolic_design/genblk4[1].genblk1[1].element/f_e2_inferred__2/i__carry
+    SLICE_X60Y24         LUT3 (Prop_lut3_I1_O)        0.124    21.828 r  reconfigurable design_1_i/systolic_unit_0/inst/systolic_design/genblk4[1].genblk1[1].element/i__carry_i_7__13/O
+                         net (fo=1, routed)           0.000    21.828    reconfigurable design_1_i/systolic_unit_0/inst/systolic_design/genblk4[2].genblk1[2].element/add/c_ab[6]_i_46__1_0[1]
+    SLICE_X60Y24         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550    22.378 r  reconfigurable design_1_i/systolic_unit_0/inst/systolic_design/genblk4[2].genblk1[2].element/add/f_e2_inferred__2/i__carry/CO[3]
+                         net (fo=23, routed)          1.171    23.548    reconfigurable design_1_i/systolic_unit_0/inst/systolic_design/genblk4[1].genblk1[1].element/c_ab[6]_i_26__1_0[0]
+    SLICE_X58Y27         LUT2 (Prop_lut2_I0_O)        0.124    23.672 r  reconfigurable design_1_i/systolic_unit_0/inst/systolic_design/genblk4[1].genblk1[1].element/c_ab[6]_i_57__1/O
+                         net (fo=1, routed)           0.290    23.962    reconfigurable design_1_i/systolic_unit_0/inst/systolic_design/genblk4[1].genblk1[1].element/c_ab[6]_i_57__1_n_0
+    SLICE_X59Y26         LUT6 (Prop_lut6_I0_O)        0.124    24.086 r  reconfigurable design_1_i/systolic_unit_0/inst/systolic_design/genblk4[1].genblk1[1].element/c_ab[6]_i_37__1/O
+                         net (fo=2, routed)           0.837    24.924    reconfigurable design_1_i/systolic_unit_0/inst/systolic_design/genblk4[1].genblk1[1].element/c_ab[6]_i_37__1_n_0
+    SLICE_X58Y24         LUT6 (Prop_lut6_I0_O)        0.124    25.048 f  reconfigurable design_1_i/systolic_unit_0/inst/systolic_design/genblk4[1].genblk1[1].element/c_ab[6]_i_26__1/O
+                         net (fo=1, routed)           0.162    25.210    reconfigurable design_1_i/systolic_unit_0/inst/systolic_design/genblk4[1].genblk1[1].element/c_ab[6]_i_26__1_n_0
+    SLICE_X58Y24         LUT6 (Prop_lut6_I5_O)        0.124    25.334 r  reconfigurable design_1_i/systolic_unit_0/inst/systolic_design/genblk4[1].genblk1[1].element/c_ab[6]_i_8__1/O
+                         net (fo=7, routed)           0.493    25.827    reconfigurable design_1_i/systolic_unit_0/inst/systolic_design/genblk4[1].genblk1[1].element/c_ab[6]_i_8__1_n_0
+    SLICE_X62Y23         LUT5 (Prop_lut5_I0_O)        0.124    25.951 f  reconfigurable design_1_i/systolic_unit_0/inst/systolic_design/genblk4[1].genblk1[1].element/c_ab[6]_i_3__4/O
+                         net (fo=1, routed)           0.563    26.513    reconfigurable design_1_i/systolic_unit_0/inst/systolic_design/genblk4[2].genblk1[2].element/mul/c_ab_reg[6]_5
+    SLICE_X64Y23         LUT6 (Prop_lut6_I2_O)        0.124    26.637 r  reconfigurable design_1_i/systolic_unit_0/inst/systolic_design/genblk4[2].genblk1[2].element/mul/c_ab[6]_i_1__4/O
+                         net (fo=1, routed)           0.000    26.637    reconfigurable design_1_i/systolic_unit_0/inst/systolic_design/genblk4[2].genblk1[2].element/out_f[6]
+    SLICE_X64Y23         FDRE                                         r  reconfigurable design_1_i/systolic_unit_0/inst/systolic_design/genblk4[2].genblk1[2].element/c_ab_reg[6]/D
+  -------------------------------------------------------------------    ----------------------------------
+
+                         (clock clk_fpga_0 rise edge)
+                                                     10.000    10.000 r                 
+    PS7_X0Y0             PS7                          0.000    10.000 r  static         design_1_i/processing_system7_0/inst/PS7_i/FCLKCLK[0]
+                         net (fo=1, routed)           1.088    11.088    static         design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]
+    BUFGCTRL_X0Y17       BUFG (Prop_bufg_I_O)         0.091    11.179 r  static         design_1_i/processing_system7_0/inst/buffer_fclk_clk_0.FCLK_CLK_0_BUFG/O
+                         net (fo=3383, routed)        1.542    12.721    boundary       design_1_i/systolic_unit_0/inst/systolic_design/genblk4[2].genblk1[2].element/i_clk
+    SLICE_X64Y23         FDRE                                         r  reconfigurable design_1_i/systolic_unit_0/inst/systolic_design/genblk4[2].genblk1[2].element/c_ab_reg[6]/C
+                         clock pessimism              0.230    12.951                     
+                         clock uncertainty           -0.154    12.797                     
+    SLICE_X64Y23         FDRE (Setup_fdre_C_D)        0.032    12.829    reconfigurable   design_1_i/systolic_unit_0/inst/systolic_design/genblk4[2].genblk1[2].element/c_ab_reg[6]
+  -------------------------------------------------------------------
+                         required time                         12.829                     
+                         arrival time                         -26.637                     
+  -------------------------------------------------------------------
+                         slack                                -13.808                     
+
+

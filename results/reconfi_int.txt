@@ -1,0 +1,234 @@
+report_pr_configuration_analysis
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
+| Date         : Wed Nov 29 18:45:40 2023
+| Host         : nanditha running 64-bit Ubuntu 18.04.6 LTS
+| Command      : report_pr_configuration_analysis
+| Design       : design_1_wrapper
+| Device       : xc7z020
+------------------------------------------------------------------------------------
+
+PR Cross-configuration Analysis Report
+
+Table of Contents
+-----------------
+1. Complexity Summary
+2. Reconfigurable Module Complexity 'design_1_i/systolic_unit_0/inst'
+3. Static Clock Summary
+4. Reconfigurable Module Clocking 'design_1_i/systolic_unit_0/inst'
+5. FSR Clock Summary
+6. Reconfigurable Module Boundary Timing 'design_1_i/systolic_unit_0/inst'
+
+1. Complexity Summary
+---------------------
+
++----------------------------+-----------+---------------+-------------+
+|         Categories         | Grid Type |     Static    |   RP1 Max   |
++----------------------------+-----------+---------------+-------------+
+| Slice Logic                |           |               |             |
+|   Slice LUTs               |     SLICE |  1836 (4.54%) |  93 (0.73%) |
+|     LUT as Logic           |     SLICE |  1640 (4.06%) |  93 (0.73%) |
+|     LUT as Memory          |     SLICE |   196 (1.40%) |   0 (0.00%) |
+|     LUT as Distributed RAM |     SLICE |    24 (0.17%) |   0 (0.00%) |
+|     LUT as Shift Register  |     SLICE |   172 (1.23%) |   0 (0.00%) |
+|   Slice Registers          |     SLICE |  2751 (4.98%) | 249 (0.97%) |
+|     Register as Flip Flop  |     SLICE |  2751 (3.40%) | 249 (0.97%) |
+|   CARRY4                   |     SLICE |    56 (0.55%) |  20 (0.63%) |
+|   F7 Muxes                 |     SLICE |    17 (0.08%) |   0 (0.00%) |
+|   Unique Control Sets      |     SLICE |   165 (1.63%) |   4 (0.13%) |
+| Memory                     |           |               |             |
+|   Block RAM Tile           |           |   65 (59.09%) |   0 (0.00%) |
+|     RAMB36/FIFO            |    RAMB36 |   65 (59.09%) |   0 (0.00%) |
+|     RAMB18                 |    RAMB18 |     1 (0.45%) |   0 (0.00%) |
+| Arithmetic                 |           |               |             |
+|   DSPs                     |     DSP48 |     0 (0.00%) | 19 (47.50%) |
+| IOs                        |           |               |             |
+|   BIBUF                    |     IOPAD | 130 (100.00%) |   0 (0.00%) |
+| Other Logic                |           |               |             |
+|   BSCANE2                  |     BSCAN |    1 (25.00%) |   0 (0.00%) |
+|   BUFG                     |  BUFGCTRL |     2 (6.25%) |   0 (0.00%) |
+|   PS7                      |       PS7 |   1 (100.00%) |   0 (0.00%) |
+|   PPLOCs (INT Tile Ratio)  |         - |           153 |   153(0.08) |
+|   HDPRA DRC Gaps           |         - |             0 |           0 |
+|   HDPRA DRC Edges          |         - |             0 |           0 |
++----------------------------+-----------+---------------+-------------+
+*(1) Notes: RP1 region maps to reconfigurable instance 'design_1_i/systolic_unit_0/inst'
+*(2) Notes: Floorplan HDPRA Gaps and Edges are areas in the floorplan that may be problematic for implementation. When gaps or edges are reported,
+     run 'report_drc -checks [get_drc_checks HDPRA-*]' for more information.
+*(3) Notes: The final LUT count, after physical optimizations and full implementation, is typically lower.
+     Run opt_design after synthesis, if not already completed, for a more realistic count.
+
+
+2. Reconfigurable Module Complexity 'design_1_i/systolic_unit_0/inst'
+---------------------------------------------------------------------
+
++---------------------------+-----------+-------------+-------------+
+|         Categories        | Grid Type |   Current   |     Max     |
++---------------------------+-----------+-------------+-------------+
+| Slice Logic               |           |             |             |
+|   Slice LUTs              |     SLICE |  93 (0.73%) |  93 (0.73%) |
+|     LUT as Logic          |     SLICE |  93 (0.73%) |  93 (0.73%) |
+|   Slice Registers         |     SLICE | 249 (0.97%) | 249 (0.97%) |
+|     Register as Flip Flop |     SLICE | 249 (0.97%) | 249 (0.97%) |
+|   CARRY4                  |     SLICE |  20 (0.63%) |  20 (0.63%) |
+|   Unique Control Sets     |     SLICE |   4 (0.13%) |   4 (0.13%) |
+| Arithmetic                |           |             |             |
+|   DSPs                    |     DSP48 | 19 (47.50%) | 19 (47.50%) |
+|   PPLOCs (INT Tile Ratio) |         - |   153(0.08) |   153(0.08) |
+|   HDPRA DRC Gaps          |         - |           0 |           0 |
+|   HDPRA DRC Edges         |         - |           0 |           0 |
++---------------------------+-----------+-------------+-------------+
+
+
+3. Static Clock Summary
+-----------------------
+
++------------------------------------------------+--------------+---------------+
+|                   Clock Name                   | Static Loads | RP1 Max Loads |
++------------------------------------------------+--------------+---------------+
+| design_1_i/processing_system7_0/inst/FCLK_CLK0 |         2642 |           268 |
+| dbg_hub/inst/BSCANID.u_xsdbm_id/itck_i         |          482 |             0 |
++------------------------------------------------+--------------+---------------+
+*(1) Notes: RP1 region maps to reconfigurable instance 'design_1_i/systolic_unit_0/inst'
+
+
+4. Reconfigurable Module Clocking 'design_1_i/systolic_unit_0/inst'
+-------------------------------------------------------------------
+
++--------------------------------------------------+---------+-----------+
+|                    Clock Name                    | Current | Max Loads |
++--------------------------------------------------+---------+-----------+
+| Static Clocks                                    |         |           |
+|   design_1_i/processing_system7_0/inst/FCLK_CLK0 |     268 |       268 |
++--------------------------------------------------+---------+-----------+
+
+
+5. FSR Clock Summary
+--------------------
+
++------+---------------------+------------------+
+|  FSR | RP1 reserved clocks | Available clocks |
++------+---------------------+------------------+
+| X0Y0 |                   0 |               12 |
+| X0Y1 |                   0 |               12 |
+| X0Y2 |                   0 |               12 |
+| X1Y0 |                   1 |               11 |
+| X1Y1 |                   0 |               12 |
+| X1Y2 |                   0 |               12 |
++------+---------------------+------------------+
+*(1) Notes:  RP1 reserved clocks are the number of static clocks that drive RP1 that intersects this FSR.  These clocks are reserved for current and future RMS.
+*(2) Notes:  Available clocks are the number of available clocks to be used by this FSR to accommodate static and rm logic.
+
+
+
+6. Reconfigurable Module Boundary Timing 'design_1_i/systolic_unit_0/inst'
+--------------------------------------------------------------------------
+
++-----------------------+---------------------------------------------------+
+|    Characteristics    |                       Paths                       |
++-----------------------+---------------------------------------------------+
+| Path #1               |                                           ------- |
+|   RP Boundary Pin     |                                  o_ccu_output2[7] |
+|   RM With Worst Path  | design_1_i/systolic_unit_0/inst 1st Configuration |
+|   Static Logic Levels |                                                 1 |
+|   RM Logic Levels     |                                                 0 |
+|   Logic Path          |                         FDRE(RM) LUT3(S) FDRE(S)  |
+|   Start Point Clock   |                                         FCLK_CLK0 |
+|   End Point Clock     |                                         FCLK_CLK0 |
+|   High Fanout         |                                                 3 |
+|   Boundary Fanout     |                                                 1 |
+| Path #2               |                                           ------- |
+|   RP Boundary Pin     |                                  o_ccu_output2[9] |
+|   RM With Worst Path  | design_1_i/systolic_unit_0/inst 1st Configuration |
+|   Static Logic Levels |                                                 1 |
+|   RM Logic Levels     |                                                 0 |
+|   Logic Path          |                         FDRE(RM) LUT3(S) FDRE(S)  |
+|   Start Point Clock   |                                         FCLK_CLK0 |
+|   End Point Clock     |                                         FCLK_CLK0 |
+|   High Fanout         |                                                 3 |
+|   Boundary Fanout     |                                                 1 |
+| Path #3               |                                           ------- |
+|   RP Boundary Pin     |                                  o_ccu_output2[0] |
+|   RM With Worst Path  | design_1_i/systolic_unit_0/inst 1st Configuration |
+|   Static Logic Levels |                                                 1 |
+|   RM Logic Levels     |                                                 0 |
+|   Logic Path          |                         FDRE(RM) LUT3(S) FDRE(S)  |
+|   Start Point Clock   |                                         FCLK_CLK0 |
+|   End Point Clock     |                                         FCLK_CLK0 |
+|   High Fanout         |                                                 3 |
+|   Boundary Fanout     |                                                 1 |
+| Path #4               |                                           ------- |
+|   RP Boundary Pin     |                                 o_ccu_output2[10] |
+|   RM With Worst Path  | design_1_i/systolic_unit_0/inst 1st Configuration |
+|   Static Logic Levels |                                                 1 |
+|   RM Logic Levels     |                                                 0 |
+|   Logic Path          |                         FDRE(RM) LUT3(S) FDRE(S)  |
+|   Start Point Clock   |                                         FCLK_CLK0 |
+|   End Point Clock     |                                         FCLK_CLK0 |
+|   High Fanout         |                                                 3 |
+|   Boundary Fanout     |                                                 1 |
+| Path #5               |                                           ------- |
+|   RP Boundary Pin     |                                 o_ccu_output2[11] |
+|   RM With Worst Path  | design_1_i/systolic_unit_0/inst 1st Configuration |
+|   Static Logic Levels |                                                 1 |
+|   RM Logic Levels     |                                                 0 |
+|   Logic Path          |                         FDRE(RM) LUT3(S) FDRE(S)  |
+|   Start Point Clock   |                                         FCLK_CLK0 |
+|   End Point Clock     |                                         FCLK_CLK0 |
+|   High Fanout         |                                                 3 |
+|   Boundary Fanout     |                                                 1 |
+| Path #6               |                                           ------- |
+|   RP Boundary Pin     |                                 o_ccu_output2[12] |
+|   RM With Worst Path  | design_1_i/systolic_unit_0/inst 1st Configuration |
+|   Static Logic Levels |                                                 1 |
+|   RM Logic Levels     |                                                 0 |
+|   Logic Path          |                         FDRE(RM) LUT3(S) FDRE(S)  |
+|   Start Point Clock   |                                         FCLK_CLK0 |
+|   End Point Clock     |                                         FCLK_CLK0 |
+|   High Fanout         |                                                 3 |
+|   Boundary Fanout     |                                                 1 |
+| Path #7               |                                           ------- |
+|   RP Boundary Pin     |                                 o_ccu_output2[13] |
+|   RM With Worst Path  | design_1_i/systolic_unit_0/inst 1st Configuration |
+|   Static Logic Levels |                                                 1 |
+|   RM Logic Levels     |                                                 0 |
+|   Logic Path          |                         FDRE(RM) LUT3(S) FDRE(S)  |
+|   Start Point Clock   |                                         FCLK_CLK0 |
+|   End Point Clock     |                                         FCLK_CLK0 |
+|   High Fanout         |                                                 3 |
+|   Boundary Fanout     |                                                 1 |
+| Path #8               |                                           ------- |
+|   RP Boundary Pin     |                                 o_ccu_output2[14] |
+|   RM With Worst Path  | design_1_i/systolic_unit_0/inst 1st Configuration |
+|   Static Logic Levels |                                                 1 |
+|   RM Logic Levels     |                                                 0 |
+|   Logic Path          |                         FDRE(RM) LUT3(S) FDRE(S)  |
+|   Start Point Clock   |                                         FCLK_CLK0 |
+|   End Point Clock     |                                         FCLK_CLK0 |
+|   High Fanout         |                                                 3 |
+|   Boundary Fanout     |                                                 1 |
+| Path #9               |                                           ------- |
+|   RP Boundary Pin     |                                  o_ccu_output2[8] |
+|   RM With Worst Path  | design_1_i/systolic_unit_0/inst 1st Configuration |
+|   Static Logic Levels |                                                 1 |
+|   RM Logic Levels     |                                                 0 |
+|   Logic Path          |                         FDRE(RM) LUT3(S) FDRE(S)  |
+|   Start Point Clock   |                                         FCLK_CLK0 |
+|   End Point Clock     |                                         FCLK_CLK0 |
+|   High Fanout         |                                                 3 |
+|   Boundary Fanout     |                                                 1 |
+| Path #10              |                                           ------- |
+|   RP Boundary Pin     |                                  o_ccu_output2[2] |
+|   RM With Worst Path  | design_1_i/systolic_unit_0/inst 1st Configuration |
+|   Static Logic Levels |                                                 1 |
+|   RM Logic Levels     |                                                 0 |
+|   Logic Path          |                         FDRE(RM) LUT3(S) FDRE(S)  |
+|   Start Point Clock   |                                         FCLK_CLK0 |
+|   End Point Clock     |                                         FCLK_CLK0 |
+|   High Fanout         |                                                 3 |
+|   Boundary Fanout     |                                                 1 |
++-----------------------+---------------------------------------------------+
+
+
+
